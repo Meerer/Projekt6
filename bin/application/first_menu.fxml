@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Fenster_Controller">
+   <children>
+      <Pane fx:id="menuPane" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Button layoutX="275.0" layoutY="188.0" mnemonicParsing="false" text="Button" visible="false" />
+            <Label fx:id="label_1" alignment="CENTER" contentDisplay="CENTER" layoutX="316.0" layoutY="48.0" prefHeight="17.0" prefWidth="157.0" text="Minesweeper" textAlignment="CENTER" textFill="#6eae29">
+               <effect>
+                  <Shadow color="#010302" height="2.97" radius="0.9850000000000001" width="2.97" />
+               </effect>
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="329.0" layoutY="175.0" mnemonicParsing="false" onAction="#startGame" prefHeight="25.0" prefWidth="130.0" text="Start" />
+            <Slider fx:id="difficulty_slider" layoutX="324.0" layoutY="134.0" majorTickUnit="3.0" max="3.0" />
+            <Label layoutX="310.0" layoutY="104.0" text="Einfach" />
+            <Label layoutX="440.0" layoutY="104.0" text="Schwer" />
+            <Label layoutX="379.0" layoutY="104.0" text="Mittel" />
+            <Label layoutX="354.0" layoutY="272.0" text="Highscores">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="363.0" layoutY="335.0" mnemonicParsing="false" text="Highscores" />
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Label layoutX="50.0" layoutY="40.0" text="Your Score:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="70.0" layoutY="75.0" mnemonicParsing="false" text="Back to Menu" />
+         </children>
+      </Pane>
+      <Pane fx:id="gamePane" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <Label fx:id="Flags" layoutX="158.0" layoutY="100.0" prefHeight="25.0" prefWidth="15.0" text="0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="262.0" layoutY="59.0" text="Score">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="66.0" prefHeight="34.0" prefWidth="91.0" text="Flags left">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="Timer" layoutX="286.0" layoutY="100.0" text="0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>
